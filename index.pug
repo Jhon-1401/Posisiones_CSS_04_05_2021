@@ -1,0 +1,70 @@
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         link(rel="stylesheet", href="style.css")
+//-         title Posiciones 04 05 2021
+//-     body
+//-         //- Cajas relativas y absolutas
+//-         -var i = 0;
+//-         div(class="container")
+//-             mixin cajas()
+//-                 div(class="contenido_hijo_"+(i+1)) Caja #{i+1}
+//-             -for(i=0; i<5; i++)
+//-                 +cajas()
+
+
+//-         //- Comportamiento normal segun la estructura del html 
+//-         //- div(class="container2")
+//-         //-     div(class="contenido2_hijo_1") Caja 1
+//-         //- Menu con
+//-         -var n=0;
+//-         div Cotenido
+//-         div(class="menu")
+//-             mixin listasMenu(num,nombre,clase="")
+//-                 ul(class="menulista "+clase)
+//-                     -for(var g=1; g <= num; g++)
+//-                         li 
+//-                             a(href="#") #{nombre} #{g}
+//-             +listasMenu(4,'Menu')
+//-             +listasMenu(2,'sudmenus', 'lista2')
+//-         while n < 100
+//-             p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+//-             -n++
+          doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="style.css")
+        title Posiciones 04 05 2021
+    body
+        //- Cajas relativas y absolutas
+        -var i = 0;
+        div(class="container")
+            mixin cajas()
+                div(class="contenido_hijo_"+(i+1)) Caja #{i+1}
+            -for(i=0; i<5; i++)
+                +cajas()
+
+
+        //- Comportamiento normal segun la estructura del html 
+        //- div(class="container2")
+        //-     div(class="contenido2_hijo_1") Caja 1
+        //- Menu con
+        -var n=0;
+        div Cotenido
+        div(class="menu")
+            mixin listasMenu(num,nombre,clase="")
+                ul(class="menulista "+clase)
+                    -for(var g=1; g <= num; g++)
+                        li 
+                            a(href="#") #{nombre} #{g}
+            +listasMenu(4,'Menu')
+            +listasMenu(2,'sudmenus', 'lista2')
+        while n < 100
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+            -n++  

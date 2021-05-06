@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --colorDelMenu: #9e940c9f;
+}
+/* Cajas relativas y absolutas */
+div, div{
+   font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 120px;
+    height: 120px;
+}
+.container{
+    background: rgba(56, 199, 12, 0.233);
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    z-index: 0;
+
+}
+
+.contenido_hijo_1{
+    background: red;
+    position: absolute;
+    bottom: 0;
+}
+.contenido_hijo_2{
+    background: orange;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 180px auto;
+}
+.contenido_hijo_3{
+    background: violet;
+    position: absolute;
+    right: 0;
+}
+.contenido_hijo_4{
+    background: blue;
+    position: absolute;
+}
+.contenido_hijo_5{
+    background: greenyellow;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+/* Comportamiento normal segun la estructura del html */
+/* .container2{
+    background: black;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+.contenido2_hijo_1{
+    background: cadetblue;
+    text-align: center;
+} */
+/* Cambiar la comportamiento de las cajas sin alteral sus estructura en html */
+/* .container2{
+    background: black;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: -12.3vw;
+    margin: 0 auto; 
+    
+}
+.contenido2_hijo_1{
+    background: cadetblue;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+}  */
+
+
+/* Menu */
+.menu{
+    background: var(--colorDelMenu);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 48px;
+}
+.menulista{
+    position: absolute;
+    top: 12px;
+    padding: 0 100px;
+}
+.lista2{
+    right: 0;
+}
+li {
+    display: inline;
+    padding: 12px;
+}
+a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+a:hover{
+    color: #dadada;
+}
+li:active:nth-of-type(1){
+    background: #314d7f;
+}
